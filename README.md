@@ -85,3 +85,11 @@ docker compose up -d
 - **SNI:** cloud.example.com
 
 ![inbound](https://github.com/user-attachments/assets/dd85f07f-e627-4d88-b5b8-e918419e67e2)
+
+### 8. Подписка
+
+Для корректной работоспособности подписок 3x-ui, необходимо перейти в **Panel Settings -> Subscription** и настроить `Reverse Proxy URI` следующим образом:
+
+<img width="863" height="69" alt="image" src="https://github.com/user-attachments/assets/d5356e6c-6994-4767-8a8d-a07f64183cf4" />
+
+Не забудьте заменить `panel.example.com` на свой поддомен.
