@@ -8,7 +8,7 @@ services:
     volumes:
       - ./angie.conf:/etc/angie/angie.conf
       - ./options-ssl-angie.conf:/etc/angie/options-ssl-angie.conf
-      - 3x-ui-aio-volume:/var/lib/angie/acme/
+      - ./acme/:/var/lib/angie/acme/
     networks:
       - 3x-ui-aio-network
     restart: unless-stopped
@@ -17,7 +17,7 @@ services:
     image: ghcr.io/mhsanaei/3x-ui:latest
     container_name: 3x-ui
     volumes:
-      - 3x-ui-aio-volume:/etc/x-ui/
+      - ./db/:/etc/x-ui/
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
       X_UI_ENABLE_FAIL2BAN: "false"
@@ -36,7 +36,3 @@ services:
 networks:
   3x-ui-aio-network:
     name: 3x-ui-aio-network
-
-volumes:
-  3x-ui-aio-volume:
-    name: 3x-ui-aio-volume
