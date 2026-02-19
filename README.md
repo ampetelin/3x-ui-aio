@@ -22,9 +22,32 @@ git clone https://github.com/ampetelin/3x-ui-aio.git && cd 3x-ui-aio
 
 ### 4. Отредактируйте файл `angie.conf`
 
-Замените:
-- `<your_panel_domain>` на поддомен для панели (например, `panel.example.com`)
-- `<your_xray_domain>` на поддомен для xray (например, `cloud.example.com`)
+#### Вариант 1: автоматически (рекомендуется)
+
+Выполните команду:
+
+```bash
+sed -i \
+    -e "s|<your_panel_domain>|panel.example.com|g" \
+    -e "s|<your_xray_domain>|cloud.example.com|g" \
+    angie.conf
+```
+
+Не забудьте заменить `panel.example.com` и `cloud.example.com` на свои поддомены.
+
+#### Вариант 2: вручную
+
+Откройте файл `angie.conf` в любом редакторе:
+
+```bash
+nano angie.conf
+```
+
+И вручную замените:
+- `<your_panel_domain>` → на поддомен для панели (например, `panel.example.com`) 
+- `<your_xray_domain>` → на поддомен для xray (например, `cloud.example.com`) 
+
+Сохраните изменения после редактирования.
 
 ### 5. Запустите Docker Compose
 
