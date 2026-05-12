@@ -22,9 +22,32 @@ git clone https://github.com/ampetelin/3x-ui-aio.git && cd 3x-ui-aio
 
 ### 4. Отредактируйте файл `angie.conf`
 
-Замените:
-- `<your_panel_domain>` на поддомен для панели (например, `panel.example.com`)
-- `<your_xray_domain>` на поддомен для xray (например, `cloud.example.com`)
+#### Вариант 1: автоматически (рекомендуется)
+
+Выполните команду:
+
+```bash
+sed -i \
+    -e "s|<your_panel_domain>|panel.example.com|g" \
+    -e "s|<your_xray_domain>|cloud.example.com|g" \
+    angie.conf
+```
+
+Не забудьте заменить `panel.example.com` и `cloud.example.com` на свои поддомены.
+
+#### Вариант 2: вручную
+
+Откройте файл `angie.conf` в любом редакторе:
+
+```bash
+nano angie.conf
+```
+
+И вручную замените:
+- `<your_panel_domain>` → на поддомен для панели (например, `panel.example.com`) 
+- `<your_xray_domain>` → на поддомен для xray (например, `cloud.example.com`) 
+
+Сохраните изменения после редактирования.
 
 ### 5. Запустите Docker Compose
 
@@ -62,3 +85,11 @@ docker compose up -d
 - **SNI:** cloud.example.com
 
 ![inbound](https://github.com/user-attachments/assets/dd85f07f-e627-4d88-b5b8-e918419e67e2)
+
+### 8. Подписка
+
+Для корректной работоспособности подписок 3x-ui, необходимо перейти в **Panel Settings -> Subscription** и настроить `Reverse Proxy URI` следующим образом:
+
+<img width="863" height="69" alt="image" src="https://github.com/user-attachments/assets/d5356e6c-6994-4767-8a8d-a07f64183cf4" />
+
+Не забудьте заменить `panel.example.com` на свой поддомен.
