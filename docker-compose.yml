@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   3x-ui:
-    image: ghcr.io/mhsanaei/3x-ui:latest
+    image: ghcr.io/mhsanaei/3x-ui:2.9.4
     container_name: 3x-ui
     volumes:
       - 3x-ui-aio-volume:/etc/x-ui/
