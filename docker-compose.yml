@@ -18,6 +18,7 @@ services:
     container_name: 3x-ui
     volumes:
       - ./db/:/etc/x-ui/
+      - 3x-ui-aio-volume:/app/bin/
     environment:
       XRAY_VMESS_AEAD_FORCED: "false"
       X_UI_ENABLE_FAIL2BAN: "false"
@@ -36,3 +37,7 @@ services:
 networks:
   3x-ui-aio-network:
     name: 3x-ui-aio-network
+
+volumes:
+  3x-ui-aio-volume:
+    name: 3x-ui-aio-volume
