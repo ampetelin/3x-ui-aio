@@ -93,3 +93,14 @@ docker compose up -d
 <img width="863" height="69" alt="image" src="https://github.com/user-attachments/assets/d5356e6c-6994-4767-8a8d-a07f64183cf4" />
 
 Не забудьте заменить `panel.example.com` на свой поддомен.
+
+## Пожертвования
+- Банковской картой
+<a href="https://pay.cloudtips.ru/p/b39a3fbb" target="_blank" rel="noreferrer noopener">
+    <img width="347" height="107" alt="donation-ct-button-white" src="https://github.com/user-attachments/assets/71e01df1-5ecd-426e-b20a-c99b773d22b7" />
+</a>
+
+- Криптовалютой
+<a href="https://nowpayments.io/donation?api_key=14556cdd-8b40-4252-abdd-eba3a6bcacb2" target="_blank" rel="noreferrer noopener">
+    <img src="https://nowpayments.io/images/embeds/donation-button-white.svg" alt="Cryptocurrency & Bitcoin donation button by NOWPayments">
+</a>
